@@ -1,0 +1,42 @@
+[
+  {
+    "id": "actividad1",
+    "descripcion": "pregunta 1 drag and drop",
+    "pregunta": "¿Cuál es la capital de Costa Rica?",
+    "opciones": [
+      {
+        "id": "opt1",
+        "texto": "Heredia"
+      },
+      {
+        "id": "opt2",
+        "texto": "Cartago"
+      },
+      {
+        "id": "opt3",
+        "texto": "San José"
+      }
+    ],
+    "idCorrecta": "opt3"
+  },
+  {
+    "id": "actividad2",
+    "descripcion": "pregunta sobre presidentes",
+    "pregunta": "¿Cuál fue el primer presidente de Costa Rica?",
+    "opciones": [
+      {
+        "id": "opt1",
+        "texto": "José Castro Madríz"
+      },
+      {
+        "id": "opt2",
+        "texto": "Pepe Figueres"
+      },
+      {
+        "id": "opt3",
+        "texto": "Braulio Carrillo"
+      }
+    ],
+    "idCorrecta": "opt1"
+  }
+]
