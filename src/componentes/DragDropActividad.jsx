@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-
-
-export default function DragDropActividad(data) {
+export default function DragDropActividad({data}) {
   const [indiceActual, setIndiceActual] = useState(0);
   const [puntaje, setPuntaje] = useState(0);
   const [opcionArrastrada, setOpcionArrastrada] = useState(null);
@@ -10,7 +8,17 @@ export default function DragDropActividad(data) {
   const [mensaje, setMensaje] = useState("");
   const [zonaActiva, setZonaActiva] = useState(false);
 
-  const actividadActual = data[indiceActual];
+    const actividades = data || [];
+  const actividadActual = actividades[indiceActual];
+
+
+    if (!actividadActual) {
+    return (
+      <div className="container py-5">
+        <p>No hay actividades disponibles.</p>
+      </div>
+    );
+  }
 
   const handleDragStart = (opcion) => {
     if (respuestaSeleccionada) return; // ya respondida
@@ -77,6 +85,8 @@ export default function DragDropActividad(data) {
     setZonaActiva(false);
   };
 
+
+
   return (
     <div className="row justify-content-center">
       <div className="col-12 col-lg-8">
@@ -93,9 +103,7 @@ export default function DragDropActividad(data) {
                 {actividadActual.descripcion}
               </small>
             </div>
-            <div className="badge bg-primary fs-6">
-              Puntaje: {puntaje}
-            </div>
+            <div className="badge bg-primary fs-6">Puntaje: {puntaje}</div>
           </div>
 
           <div className="card-body">
@@ -105,7 +113,11 @@ export default function DragDropActividad(data) {
             {/* Zona de drop */}
             <div
               className={`border rounded p-3 mb-4 text-center 
-                ${zonaActiva ? "border-primary bg-light" : "border-secondary-subtle"}
+                ${
+                  zonaActiva
+                    ? "border-primary bg-light"
+                    : "border-secondary-subtle"
+                }
               `}
               onDragOver={handleDragOver}
               onDrop={handleDrop}
@@ -138,7 +150,9 @@ export default function DragDropActividad(data) {
                     className={`badge text-wrap p-2 px-3 fs-6 
                       ${esSeleccionada ? "bg-success" : "bg-secondary-subtle"}
                     `}
-                    style={{ cursor: respuestaSeleccionada ? "default" : "grab" }}
+                    style={{
+                      cursor: respuestaSeleccionada ? "default" : "grab",
+                    }}
                     draggable={!respuestaSeleccionada}
                     onDragStart={() => handleDragStart(opcion)}
                     onDragEnd={handleDragEnd}
@@ -151,9 +165,7 @@ export default function DragDropActividad(data) {
 
             {/* Mensaje de feedback */}
             {mensaje && (
-              <div className="alert alert-info mt-4 mb-0 py-2">
-                {mensaje}
-              </div>
+              <div className="alert alert-info mt-4 mb-0 py-2">{mensaje}</div>
             )}
           </div>
 
