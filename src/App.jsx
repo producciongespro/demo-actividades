@@ -12,7 +12,6 @@ export default function App() {
 
   useEffect(() => {
     console.log("dragAndDropData >>>", dragAndDropData);
-    
   }, [dragAndDropData]);
 
   useEffect(() => {
@@ -53,11 +52,7 @@ export default function App() {
         <Route
           path="/"
           element={
-            loading ? (
-              <Splash />
-            ) : (
-              <DragDropActividad data={dragAndDropData} />
-            )
+            loading ? <Splash /> : <DragDropActividad data={dragAndDropData} />
           }
         />
       </Routes>

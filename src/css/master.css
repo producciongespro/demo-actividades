@@ -1,0 +1,81 @@
+/* master.css */
+
+/* Paleta base para toda la app */
+:root {
+  --bg-gradient-start: #0f172a;
+  --bg-gradient-mid: #1d4ed8;
+  --bg-gradient-end: #9333ea;
+  --card-bg: rgba(15, 23, 42, 0.9);
+  --card-border: rgba(148, 163, 184, 0.4);
+  --accent: #22c55e;
+  --accent-soft: rgba(34, 197, 94, 0.18);
+  --danger: #ef4444;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+/* Reset suave */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fondo de toda la app, estilo plataforma educativa moderna */
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at top, var(--bg-gradient-mid), #020617)
+      fixed,
+    linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end))
+      fixed;
+  background-size: 200% 200%;
+  animation: bgShift 20s ease-in-out infinite;
+}
+
+/* Ajuste de enlaces en general */
+a {
+  color: #38bdf8;
+}
+a:hover {
+  color: #0ea5e9;
+}
+
+/* Contenedor principal para que todo respire un poco más */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Títulos generales (si los usas en App.jsx) */
+.app-title {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  margin-bottom: 0.7rem;
+}
+
+.app-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* Animación del fondo */
+@keyframes bgShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
