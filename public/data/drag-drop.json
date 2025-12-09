@@ -38,5 +38,65 @@
       }
     ],
     "idCorrecta": "opt1"
+  },
+  {
+    "id": "actividad3",
+    "descripcion": "pregunta de ciencias sobre estados de la materia",
+    "pregunta": "¿En qué estado de la materia se encuentra el agua cuando hierve?",
+    "opciones": [
+      {
+        "id": "opt1",
+        "texto": "Sólido"
+      },
+      {
+        "id": "opt2",
+        "texto": "Líquido"
+      },
+      {
+        "id": "opt3",
+        "texto": "Gaseoso"
+      }
+    ],
+    "idCorrecta": "opt3"
+  },
+  {
+    "id": "actividad4",
+    "descripcion": "pregunta de ciencias sobre el cuerpo humano",
+    "pregunta": "¿Cuál es el órgano encargado de bombear la sangre en el cuerpo humano?",
+    "opciones": [
+      {
+        "id": "opt1",
+        "texto": "Pulmones"
+      },
+      {
+        "id": "opt2",
+        "texto": "Corazón"
+      },
+      {
+        "id": "opt3",
+        "texto": "Estómago"
+      }
+    ],
+    "idCorrecta": "opt2"
+  },
+  {
+    "id": "actividad5",
+    "descripcion": "pregunta de ciencias sobre animales",
+    "pregunta": "¿Qué necesitan las plantas para realizar la fotosíntesis?",
+    "opciones": [
+      {
+        "id": "opt1",
+        "texto": "Luz solar, agua y dióxido de carbono"
+      },
+      {
+        "id": "opt2",
+        "texto": "Solo agua"
+      },
+      {
+        "id": "opt3",
+        "texto": "Solo luz solar"
+      }
+    ],
+    "idCorrecta": "opt1"
   }
 ]
